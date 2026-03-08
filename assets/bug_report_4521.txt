@@ -1,0 +1,19 @@
+Bug Report #4521
+
+Title: Login fails with special characters in password
+
+Description:
+When I try to log in with my password "P@ssw0rd!", I get a 500 error.
+Regular passwords work fine.
+
+Steps to reproduce:
+1. Go to login page
+2. Enter username: test@example.com
+3. Enter password with special char: P@ssw0rd!
+4. Click login
+5. Error 500
+
+Expected: Login succeeds
+Actual: 500 Internal Server Error
+
+Environment: Chrome 120, macOS 14
