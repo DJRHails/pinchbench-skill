@@ -207,32 +207,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Game Functionality (Weight: 35%)
 
-**Score 1.0**: Complete, playable game with physics-based merging, all 11 item levels, score tracking, game over detection, and round restart. Objects fall, collide, and merge correctly.
-**Score 0.75**: Game is mostly functional with minor issues. Most mechanics work but may have bugs in edge cases.
-**Score 0.5**: Basic game structure exists but significant mechanics are missing or broken. Objects may not merge correctly or physics are unreliable.
-**Score 0.25**: Minimal game framework with major functionality gaps. Only basic rendering or placeholder logic.
-**Score 0.0**: No functional game or completely broken implementation.
+**Score 1.0**: The game is playable with objects that fall, collide, and merge into higher-level items. Score tracking and game over detection are functional. The player can restart a round after game over.
+**Score 0.0**: No functional game, the game does not load, or core mechanics (falling, merging, or collision) are completely broken.
 
 ### Criterion 2: Visual Design & UI (Weight: 25%)
 
-**Score 1.0**: Polished, cartoon-style graphics with distinct visuals for all 11 items. Clean UI with score display, next-item preview, and responsive layout. Brewing theme is clear.
-**Score 0.75**: Good visual design with most items distinguishable. UI elements present but may lack polish.
-**Score 0.5**: Basic visuals with geometric shapes or minimal styling. Some UI elements present.
-**Score 0.25**: Very minimal visuals. Hard to distinguish items or understand game state.
-**Score 0.0**: No visual design effort or unplayable UI.
+**Score 1.0**: Items are visually distinguishable from each other, a score display is visible, and the brewing theme is recognizable through item names or visuals.
+**Score 0.0**: No visual design effort, items are indistinguishable, or the UI is too broken to understand the game state.
 
 ### Criterion 3: Technical Quality (Weight: 25%)
 
-**Score 1.0**: Well-structured code, proper physics engine integration, smooth performance, organized file structure with separate folders for assets/scripts/styles.
-**Score 0.75**: Good code organization with minor issues. Physics work but may have occasional glitches.
-**Score 0.5**: Functional but poorly organized code. Physics are basic or inconsistent.
-**Score 0.25**: Disorganized code with significant technical issues.
-**Score 0.0**: Non-functional or extremely poor code quality.
+**Score 1.0**: The game uses a physics engine or gravity simulation for object movement, code is organized into separate files (HTML, CSS, JS), and the game runs without critical errors.
+**Score 0.0**: No physics simulation present, all code is in a single unstructured file, or the game crashes on load.
 
 ### Criterion 4: Responsiveness & Cross-Platform (Weight: 15%)
 
-**Score 1.0**: Works perfectly on both desktop and mobile. Touch and mouse input supported. Layout adapts seamlessly to different screen sizes.
-**Score 0.75**: Works on desktop with basic mobile support. Most interactions work on both platforms.
-**Score 0.5**: Desktop-only or mobile-only. Input handling is limited.
-**Score 0.25**: Fixed layout, no responsive design. Input handling is problematic.
-**Score 0.0**: Does not work on any platform or no responsive considerations.
+**Score 1.0**: The game layout adapts to different screen sizes and supports at least mouse input for desktop play.
+**Score 0.0**: Fixed layout with no responsive design considerations, or input handling is completely non-functional.

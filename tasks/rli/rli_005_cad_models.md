@@ -170,32 +170,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Dimensional Accuracy (Weight: 30%)
 
-**Score 1.0**: Both vent models built precisely to the specified dimensions. Plate diameters (18", 17", 17.5"), bolt hole sizes (5/16", 3/16"), bolt lengths (3 3/8", 1 1/8"), cover/dome dimensions, and heights all match specifications. Bolt hole counts are correct (7 and 3).
-**Score 0.75**: Most dimensions are correct with minor deviations. Bolt hole counts and major dimensions are accurate.
-**Score 0.5**: Overall proportions are reasonable but several key dimensions are off or bolt specifications are wrong.
-**Score 0.25**: Rough approximations of the vent shapes with poor dimensional accuracy.
-**Score 0.0**: No meaningful dimensional adherence or no models produced.
+**Score 1.0**: Both vent models are present and built to approximately the specified dimensions, with correct plate diameters, bolt hole counts (7 and 3), and cover/dome heights.
+**Score 0.0**: No models produced, only one vent type modeled, or dimensions bear no meaningful relation to the specifications.
 
 ### Criterion 2: Design Quality (Weight: 25%)
 
-**Score 1.0**: Professional CAD modeling with proper interlocking features between plates, appropriate bolt circle diameters, functional geometry (necks, flanges), and a mechanically complete Whirlybird internal assembly (axle, bracing). Components are logically stackable.
-**Score 0.75**: Good design with interlocking features and reasonable internal assembly. Minor design issues.
-**Score 0.5**: Basic models that capture the general shape but lack interlocking features or the Whirlybird internals.
-**Score 0.25**: Simple geometric shapes without engineering design considerations.
-**Score 0.0**: No models or non-functional geometry.
+**Score 1.0**: Models include interlocking features between bottom and middle plates, and the Whirlybird includes a simplified internal assembly (axle or bracing). Components are logically stackable.
+**Score 0.0**: No models produced, models are simple geometric shapes without engineering features, or both interlocking features and Whirlybird internals are missing.
 
 ### Criterion 3: Exploded Views and Drawings (Weight: 25%)
 
-**Score 1.0**: Clear exploded view STEP files for both vents showing assembly order. PDF drawings include component names, bolt size callouts, and clear visual separation of parts. Assembly sequence is logically presented.
-**Score 0.75**: Exploded views and drawings present for both vents with minor labeling omissions.
-**Score 0.5**: Exploded views exist but drawings lack bolt information or component labels, or only one vent type covered.
-**Score 0.25**: Minimal exploded view attempt or drawings without meaningful annotations.
-**Score 0.0**: No exploded views or assembly drawings.
+**Score 1.0**: Exploded view STEP files exist for at least one vent type, and at least one PDF drawing is present with component labels or bolt callouts.
+**Score 0.0**: No exploded views and no assembly drawings produced.
 
 ### Criterion 4: Deliverable Completeness (Weight: 20%)
 
-**Score 1.0**: All deliverables present — STEP files for 2 assembled vents, 2 exploded vents, and PDF assembly drawings. Files are properly named and organized.
-**Score 0.75**: Most deliverables present with one or two minor items missing.
-**Score 0.5**: About half the deliverables present (e.g., only one vent type, or no exploded views).
-**Score 0.25**: Only a few files produced.
-**Score 0.0**: No deliverables.
+**Score 1.0**: STEP files exist for both assembled vents and at least one exploded view, plus at least one PDF assembly drawing.
+**Score 0.0**: Fewer than two STEP files produced, or no PDF drawings exist.

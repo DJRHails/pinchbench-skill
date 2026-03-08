@@ -199,32 +199,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Content Completeness (Weight: 30%)
 
-**Score 1.0**: All content from the project outline is included — introduction, methodology, mathematical modeling, controller design, simulation results, and MATLAB code. Handwritten equations from E1.pdf are accurately transcribed. Paper structure follows the outline faithfully.
-**Score 0.75**: Most content is present with minor omissions. Equations are mostly transcribed correctly.
-**Score 0.5**: Key sections present but significant content missing. Some equations or sections from the outline are omitted.
-**Score 0.25**: Only partial content transcribed. Major sections missing.
-**Score 0.0**: Minimal or no content from the source materials.
+**Score 1.0**: The major sections from the project outline are present (introduction, methodology, mathematical modeling, controller design, simulation results, MATLAB code). Handwritten equations from E1.pdf are transcribed. Minor omissions or transcription errors are acceptable.
+**Score 0.0**: Most sections from the outline are missing, or no content from the source materials is included.
 
 ### Criterion 2: LaTeX and IEEE Formatting (Weight: 30%)
 
-**Score 1.0**: Proper IEEE conference format with two-column layout. Equations are numbered sequentially and properly typeset (fractions, subscripts, transfer functions). Figures are correctly placed with captions. MATLAB code is properly formatted with syntax highlighting or monospace. Bibliography follows IEEE style.
-**Score 0.75**: Good IEEE formatting with minor issues. Most equations and figures are properly formatted.
-**Score 0.5**: Basic LaTeX document that approximates IEEE format but has noticeable formatting problems.
-**Score 0.25**: LaTeX file exists but formatting is poor or not IEEE-compliant.
-**Score 0.0**: No LaTeX formatting or non-functional .tex file.
+**Score 1.0**: The document uses IEEE conference format with two-column layout. Equations are numbered and typeset in LaTeX math environments. Figures have captions. MATLAB code is formatted in a code environment (lstlisting, verbatim, or similar). Minor formatting issues are acceptable.
+**Score 0.0**: No LaTeX formatting applied, or the .tex file is non-functional and does not resemble IEEE format.
 
 ### Criterion 3: Figure Integration (Weight: 20%)
 
-**Score 1.0**: Relevant figures from the Figures/ directory are properly integrated. Duplicate figures handled correctly (following the project outline). All figures have descriptive captions (or appropriate placeholders). Figures are referenced in the text and placed near their references.
-**Score 0.75**: Most figures integrated correctly with captions. Minor issues with placement or a few missing figures.
-**Score 0.5**: Some figures included but many missing, or captions are absent/incorrect.
-**Score 0.25**: Very few figures integrated.
-**Score 0.0**: No figures included.
+**Score 1.0**: Multiple figures from the Figures/ directory are integrated into the document with captions (descriptive or placeholder). Figures are referenced in the text. A few missing or misplaced figures are acceptable.
+**Score 0.0**: No figures included from the provided directory, or figures lack any captions.
 
 ### Criterion 4: Compiled Output Quality (Weight: 20%)
 
-**Score 1.0**: Clean compiled PDF of approximately 14 pages. No LaTeX compilation errors. Professional appearance matching IEEE conference standards. All equations render correctly, figures display properly, and code blocks are readable.
-**Score 0.75**: PDF compiles with minor warnings. Appearance is good with few visual issues.
-**Score 0.5**: PDF exists but has compilation artifacts, missing figures, or rendering issues.
-**Score 0.25**: PDF partially compiles with significant errors or missing content.
-**Score 0.0**: No compiled PDF or completely broken output.
+**Score 1.0**: A compiled PDF exists and renders with equations, figures, and code blocks visible. The document has a professional appearance approximating IEEE conference standards. Minor compilation warnings or visual imperfections are acceptable.
+**Score 0.0**: No compiled PDF produced, or the PDF is completely broken with most content missing or unreadable.

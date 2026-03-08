@@ -134,32 +134,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Arrangement Quality (Weight: 35%)
 
-**Score 1.0**: The arrangement faithfully captures the style and character of the Max Raabe/Palast Orchester version. Main melodic lines, harmonies, rhythmic patterns, and the overall 1920s-30s big band feel are preserved despite the reduced instrumentation. Parts are idiomatically written for each instrument.
-**Score 0.75**: Good arrangement that captures the general style. Most main parts are present though some orchestral elements may be simplified or missing.
-**Score 0.5**: Recognizable arrangement of "Singing In The Rain" but does not strongly reflect the Max Raabe version. Generic big band or jazz arrangement rather than specific transcription.
-**Score 0.25**: Basic melody with minimal arrangement. Little resemblance to the specified version.
-**Score 0.0**: No arrangement produced or completely wrong song.
+**Score 1.0**: The arrangement is a recognizable version of "Singing In The Rain" that reflects the Max Raabe/Palast Orchester style. Main melodic lines and harmonies are present, and the overall 1920s-30s feel is conveyed despite the reduced instrumentation. Some simplification of orchestral elements is acceptable.
+**Score 0.0**: No arrangement produced, completely wrong song, or the arrangement bears no resemblance to the specified version.
 
 ### Criterion 2: Instrumentation and Transposition (Weight: 25%)
 
-**Score 1.0**: All 7 instruments have properly written parts. B-flat trumpet and tenor saxophone parts are correctly transposed. Piano part includes both hands. Double bass part is appropriate for the instrument's range. Vocal melody is notated without lyrics. Parts are playable and idiomatic for each instrument.
-**Score 0.75**: All instruments present with mostly correct transpositions. Minor playability issues in some parts.
-**Score 0.5**: Most instruments present but transposition errors for B-flat instruments, or some parts are not idiomatic for the instrument.
-**Score 0.25**: Several instruments missing or significant transposition errors.
-**Score 0.0**: Missing most instrument parts or fundamentally incorrect notation.
+**Score 1.0**: At least 5 of the 7 specified instruments have written parts. B-flat instruments are transposed (or a clear attempt is made). Vocal melody is notated without lyrics. Parts are generally playable for the intended instruments.
+**Score 0.0**: Most instrument parts are missing, or notation is fundamentally incorrect (e.g., no transposition attempted, wrong clefs throughout).
 
 ### Criterion 3: Score Presentation (Weight: 20%)
 
-**Score 1.0**: Professional-quality full score PDF with clear notation, proper formatting, instrument labels, key signatures, time signatures, dynamics, and articulation markings. Score is readable and ready for performers.
-**Score 0.75**: Good score with clear notation. Minor formatting issues but readable by performers.
-**Score 0.5**: Basic score that conveys the notes but lacks dynamics, articulations, or has formatting problems.
-**Score 0.25**: Poorly formatted score that would be difficult for performers to read.
-**Score 0.0**: No usable score produced.
+**Score 1.0**: A full score PDF exists with clear notation, instrument labels, key signatures, and time signatures. The score is readable by performers, even if dynamics or articulations are sparse.
+**Score 0.0**: No usable score produced, or the score is so poorly formatted that it cannot be read by performers.
 
 ### Criterion 4: Deliverable Completeness (Weight: 20%)
 
-**Score 1.0**: All four deliverables present and functional — PDF score, MusicXML file (parseable by notation software), MIDI file (plays correctly), and MP3 audio rendering (audible and representative of the arrangement).
-**Score 0.75**: Most deliverables present and functional with one minor issue.
-**Score 0.5**: Some deliverables missing or non-functional (e.g., corrupted files).
-**Score 0.25**: Only one or two deliverables present.
-**Score 0.0**: No deliverables produced.
+**Score 1.0**: At least three of the four deliverables are present and functional (PDF score, MusicXML, MIDI, MP3). Files open correctly in appropriate software.
+**Score 0.0**: Fewer than two deliverables produced, or most files are corrupted/non-functional.

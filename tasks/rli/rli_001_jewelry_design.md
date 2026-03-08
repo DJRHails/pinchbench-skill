@@ -134,32 +134,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Diamond Shape Accuracy (Weight: 30%)
 
-**Score 1.0**: The marquise-cut diamond is correctly modeled with the distinctive elongated shape and pointed ends. Proportions are realistic and the diamond is well-integrated into the ring setting.
-**Score 0.75**: Diamond shape is recognizably marquise but proportions may be slightly off or integration with the setting has minor issues.
-**Score 0.5**: Diamond shape attempts marquise but is not clearly distinguishable from other cuts, or has notable proportion issues.
-**Score 0.25**: Diamond is present but does not resemble a marquise cut.
-**Score 0.0**: No diamond modeled or still shows the original emerald cut.
+**Score 1.0**: A marquise-cut diamond is modeled with a recognizably elongated shape and pointed ends, integrated into the ring setting.
+**Score 0.0**: No diamond modeled, still shows the original emerald cut, or diamond does not resemble a marquise cut.
 
 ### Criterion 2: Design Fidelity (Weight: 25%)
 
-**Score 1.0**: All other design elements from the reference image are faithfully maintained — band style, setting type, proportions, and decorative details match the original.
-**Score 0.75**: Most design elements are preserved with minor deviations from the reference.
-**Score 0.5**: Some design elements maintained but noticeable differences from the original ring design.
-**Score 0.25**: Ring is generic and does not closely follow the reference design.
-**Score 0.0**: No attempt to follow the reference design.
+**Score 1.0**: The ring design meaningfully follows the reference image, preserving the band style, setting type, and overall proportions.
+**Score 0.0**: No attempt to follow the reference design, or the ring is entirely generic with no recognizable connection to the original.
 
 ### Criterion 3: Render Quality (Weight: 25%)
 
-**Score 1.0**: All four required renders are present with photorealistic quality. Rose gold and yellow gold materials are distinct and accurate. Lighting, reflections, and shadows are professional-grade.
-**Score 0.75**: All renders present with good quality. Materials are distinguishable but may lack photorealism.
-**Score 0.5**: Some renders present but quality is mediocre, or material differentiation is weak.
-**Score 0.25**: Minimal renders with poor quality or missing gold variants.
-**Score 0.0**: No usable renders produced.
+**Score 1.0**: At least two renders are present showing distinguishable rose gold and yellow gold materials with reasonable lighting and reflections.
+**Score 0.0**: No usable renders produced, or renders lack any material differentiation between gold types.
 
 ### Criterion 4: Deliverable Completeness (Weight: 20%)
 
-**Score 1.0**: All deliverables present — .3dm model file, four JPEG renders at minimum 1280x1280, correctly named and organized.
-**Score 0.75**: Most deliverables present with minor issues (e.g., one render slightly under resolution).
-**Score 0.5**: Some deliverables missing (e.g., missing model file or only two of four renders).
-**Score 0.25**: Only a few deliverables present.
-**Score 0.0**: No deliverables produced.
+**Score 1.0**: A .3dm model file and at least three of the four required JPEG renders (rose gold front, rose gold side, yellow gold front, yellow gold side) are present at minimum 1280x1280 resolution.
+**Score 0.0**: No deliverables produced, or only a single file type (model only or renders only) is present.

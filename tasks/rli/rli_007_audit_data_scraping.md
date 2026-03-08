@@ -136,32 +136,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Extraction Completeness (Weight: 35%)
 
-**Score 1.0**: All PDFs processed. Every finding from each report is extracted with all available fields. No findings missed.
-**Score 0.75**: Most findings extracted from all reports. Minor omissions in some fields or a few findings missed.
-**Score 0.5**: Some reports processed but significant findings missed, or several reports skipped entirely.
-**Score 0.25**: Only partial extraction from a subset of reports. Many findings missed.
-**Score 0.0**: No meaningful extraction performed.
+**Score 1.0**: All PDFs are processed and findings are extracted with the key available fields. Minor omissions in some fields or a few missed findings are acceptable.
+**Score 0.0**: No meaningful extraction performed, or most reports are skipped entirely.
 
 ### Criterion 2: Field Accuracy (Weight: 30%)
 
-**Score 1.0**: Extracted fields accurately match the PDF content. Severity levels, descriptions, recommendations, and other metadata correctly captured. No fabricated data.
-**Score 0.75**: Most fields are accurate with minor errors in a few entries.
-**Score 0.5**: Some fields are correct but notable inaccuracies in descriptions or severity classifications.
-**Score 0.25**: Significant inaccuracies or many fields incorrectly extracted.
-**Score 0.0**: Data is fabricated or completely inaccurate.
+**Score 1.0**: Extracted fields generally match the PDF content. Severity levels, descriptions, and recommendations are correctly captured with at most minor errors. No fabricated data.
+**Score 0.0**: Data is largely fabricated, or most fields are inaccurately extracted.
 
 ### Criterion 3: Output Format (Weight: 20%)
 
-**Score 1.0**: Clean, consistent structured format across all output files. Easy to parse programmatically. One file per report as requested.
-**Score 0.75**: Consistent format with minor inconsistencies between files.
-**Score 0.5**: Format is readable but inconsistent or hard to parse.
-**Score 0.25**: Unstructured or disorganized output.
-**Score 0.0**: No usable output format.
+**Score 1.0**: Output files use a structured format (e.g., consistent headings, key-value pairs) and one file per report is produced. Minor inconsistencies between files are acceptable.
+**Score 0.0**: No usable structured output, or output is a single undifferentiated dump.
 
 ### Criterion 4: Handling Edge Cases (Weight: 15%)
 
-**Score 1.0**: Missing fields properly omitted. Additional fields present in reports (e.g., "Type", "Target") are captured. Handles different report formats gracefully.
-**Score 0.75**: Mostly handles edge cases but may miss additional fields or include empty placeholders.
-**Score 0.5**: Basic handling but struggles with format variations between reports.
-**Score 0.25**: Poor handling of edge cases. Crashes or produces errors.
-**Score 0.0**: Cannot handle any variations in report format.
+**Score 1.0**: Missing fields are omitted rather than filled with placeholders. Different report formats are handled without crashing. Additional fields present in reports are captured where feasible.
+**Score 0.0**: Cannot handle variations in report format, or crashes and produces errors on most inputs.

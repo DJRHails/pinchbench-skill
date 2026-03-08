@@ -167,32 +167,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Animation Quality (Weight: 30%)
 
-**Score 1.0**: Smooth, professional 2D animation with flat design style. Visuals include nature-related icons, illustrations, and subtle character use. Motion graphics and transitions are clean and engaging. No static slides.
-**Score 0.75**: Good animation quality with mostly flat design. Some transitions may be basic but visuals are clearly animated.
-**Score 0.5**: Basic animation present but quality is rough. May rely heavily on simple transitions or slide-like presentation.
-**Score 0.25**: Minimal animation — mostly static images with basic fade transitions.
-**Score 0.0**: No animation or only static content.
+**Score 1.0**: The video contains meaningful 2D animation with visible motion (not just static slides with fade transitions). Visuals include icons, illustrations, or characters that move or transition on screen.
+**Score 0.0**: No animation present, only static images, or no visual content at all.
 
 ### Criterion 2: Script and Content Alignment (Weight: 30%)
 
-**Score 1.0**: Visuals clearly illustrate each step of the script in sequence. The consultation, assessment, care plan, execution, safety, and cleanup steps are all visually represented and synchronized with the voiceover.
-**Score 0.75**: Most script steps are visually represented with good timing alignment.
-**Score 0.5**: Some steps are illustrated but the visual narrative is incomplete or poorly timed with audio.
-**Score 0.25**: Minimal connection between visuals and the script content.
-**Score 0.0**: Visuals are unrelated to the script or no visual content.
+**Score 1.0**: Visuals illustrate at least half of the script steps (consultation, assessment, care plan, execution, safety, cleanup) in a recognizable sequence that relates to the voiceover content.
+**Score 0.0**: Visuals are unrelated to the script, or no visual content accompanies the audio.
 
 ### Criterion 3: Visual Design (Weight: 20%)
 
-**Score 1.0**: Natural color palette (greens, browns, light blues) consistently applied. Bold fonts used for any text. Professional branding feel for Skyline Tree Services. No subtitles. Clean, modern aesthetic.
-**Score 0.75**: Good color palette and design with minor inconsistencies.
-**Score 0.5**: Basic design that partially follows the color and style requirements.
-**Score 0.25**: Poor design choices that do not match the specified style.
-**Score 0.0**: No design effort or completely wrong visual style.
+**Score 1.0**: The video uses a nature-appropriate color palette (greens, browns, or light blues) and maintains a clean, modern aesthetic consistent with a tree services brand.
+**Score 0.0**: No design effort applied, colors are completely unrelated to the nature/tree services theme, or visual style is incoherent.
 
 ### Criterion 4: Audio Integration (Weight: 20%)
 
-**Score 1.0**: Provided voiceover audio is properly integrated with clear sound quality. Animation timing is synchronized with the voiceover narration. Video length matches the audio duration.
-**Score 0.75**: Audio is present and mostly synchronized with minor timing issues.
-**Score 0.5**: Audio is included but synchronization is noticeably off, or audio quality is degraded.
-**Score 0.25**: Audio is present but poorly integrated or out of sync.
-**Score 0.0**: No audio or wrong audio used.
+**Score 1.0**: The provided voiceover audio is included in the video and the video length approximately matches the audio duration.
+**Score 0.0**: No audio present, wrong audio used, or the audio is completely out of sync with the video length.

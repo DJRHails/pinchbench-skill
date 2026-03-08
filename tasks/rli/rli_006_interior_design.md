@@ -168,32 +168,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Bathroom Design Quality (Weight: 30%)
 
-**Score 1.0**: Three distinct, professional bathroom design options. Each has at least 3 high-quality renders (including top view) at minimum 1200px. Material boards clearly show finish selections. Wall-hung WC is correctly positioned. Designs show creativity and practical consideration of the existing space.
-**Score 0.75**: Three options present with good quality renders. Material boards exist but may lack some detail. Designs are practical.
-**Score 0.5**: Two or three options present but render quality is basic, views are limited, or material boards are incomplete.
-**Score 0.25**: One option with minimal renders and no material boards.
-**Score 0.0**: No bathroom design work produced.
+**Score 1.0**: At least two bathroom design options are present with renders (including a top view) and material boards. Wall-hung WC is positioned. Designs show practical consideration of the existing space. Minor omissions in render count or material board detail are acceptable.
+**Score 0.0**: Fewer than two bathroom options produced, or no renders/material boards exist.
 
 ### Criterion 2: Furniture Layouts (Weight: 25%)
 
-**Score 1.0**: Six distinct furniture layout options as PDF floor plans. Imperial dimensions (feet-inches) clearly marked for key clearances and furniture sizes. Consolidated DWG file contains all options. Layouts are practical and respect room proportions.
-**Score 0.75**: Most layout options present with dimensions. Minor formatting issues or one option missing.
-**Score 0.5**: Some layouts present but missing dimensions, or only 3-4 options provided.
-**Score 0.25**: One or two basic layouts without proper dimensioning.
-**Score 0.0**: No furniture layouts produced.
+**Score 1.0**: At least four furniture layout options are provided as floor plans with imperial dimensions for key clearances and furniture sizes. Layouts are practical and respect room proportions. Minor formatting issues are acceptable.
+**Score 0.0**: Fewer than three layout options produced, or layouts lack any dimensioning.
 
 ### Criterion 3: Detailed Plans for Final Option (Weight: 25%)
 
-**Score 1.0**: All four detailed plans present for the chosen final option — RCP/lighting, toilet installation, electrical layout, and floor finishes. Each includes proper symbols, legends, dimensions, and mounting heights as specified. Plans are professional quality.
-**Score 0.75**: Most detailed plans present with good quality. Minor omissions in legends or dimensions.
-**Score 0.5**: Some plans present but missing key information, or only 2 of 4 plans completed.
-**Score 0.25**: One plan with minimal detail.
-**Score 0.0**: No detailed plans produced.
+**Score 1.0**: At least three of the four detailed plans are present for the chosen final option (RCP/lighting, toilet installation, electrical layout, floor finishes). Plans include symbols, legends, or dimensions as appropriate.
+**Score 0.0**: Fewer than two detailed plans produced, or plans lack meaningful content.
 
 ### Criterion 4: CAD Trace and File Completeness (Weight: 20%)
 
-**Score 1.0**: Clean CAD trace of the cadastral plan in DWG + PDF. Walls, doors, and windows properly aligned and to scale. All deliverable file formats correct (JPG, SKP, PDF, DWG). Files well organized and named.
-**Score 0.75**: CAD trace present with minor alignment issues. Most file formats correct.
-**Score 0.5**: Basic CAD trace or missing some required file formats.
-**Score 0.25**: Minimal CAD work, missing multiple deliverable formats.
-**Score 0.0**: No CAD trace or files in wrong formats.
+**Score 1.0**: A CAD trace of the cadastral plan exists in DWG or PDF format with walls, doors, and windows traced. Deliverable files are provided in the requested formats (JPG, SKP, PDF, DWG). Minor alignment issues are acceptable.
+**Score 0.0**: No CAD trace produced, or most required file formats are missing.

@@ -137,32 +137,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: 3D Model Quality (Weight: 30%)
 
-**Score 1.0**: Earbuds and case models are detailed, accurate to the reference images, and show professional modeling quality. Key design elements (silicone tips, stem, L/R indicators, case) are clearly identifiable. Materials and textures are realistic.
-**Score 0.75**: Good model quality with most design elements present. Minor inaccuracies compared to reference images.
-**Score 0.5**: Basic 3D models that approximate the earbud shape but lack detail or accuracy to the reference.
-**Score 0.25**: Very rough models that barely resemble earbuds.
-**Score 0.0**: No 3D models produced or models are unrecognizable.
+**Score 1.0**: 3D models of the earbuds and case are present and recognizably resemble earbuds with key design elements (tips, stem, case) identifiable.
+**Score 0.0**: No 3D models produced, or models are unrecognizable as earbuds.
 
 ### Criterion 2: Animation Quality and Feature Showcase (Weight: 30%)
 
-**Score 1.0**: Five distinct, smooth animations each clearly showcasing a different feature. Camera work is professional with appropriate angles to highlight each feature. Transitions are polished. The replaceable battery animation clearly shows the swap mechanism.
-**Score 0.75**: Five clips with good animation quality. Most features are clearly demonstrated with appropriate camera work.
-**Score 0.5**: Some clips present but animation quality is basic, or features are not clearly differentiated between clips.
-**Score 0.25**: Few clips with minimal animation — mostly static rotations without feature focus.
-**Score 0.0**: No animation clips or non-functional output.
+**Score 1.0**: At least three animation clips are present with visible motion (camera movement, object animation, or transitions) that showcase different aspects of the product.
+**Score 0.0**: No animation clips produced, or output is entirely static with no motion.
 
 ### Criterion 3: Feature Completeness (Weight: 25%)
 
-**Score 1.0**: All four key features are distinctly showcased — silicone tips, replaceable battery mechanism, charging case, and L/R indicator decals. Each feature gets dedicated screen time.
-**Score 0.75**: Most features are covered but one may be underrepresented or combined with another.
-**Score 0.5**: Only two or three features clearly showcased.
-**Score 0.25**: Only one feature is identifiable in the animations.
-**Score 0.0**: No features are clearly demonstrated.
+**Score 1.0**: At least three of the four key features (silicone tips, replaceable battery mechanism, charging case, L/R indicator decals) are identifiably showcased across the clips.
+**Score 0.0**: Fewer than two features are identifiable, or no features are demonstrated in the output.
 
 ### Criterion 4: Marketing Suitability (Weight: 15%)
 
-**Score 1.0**: Clips are polished enough for marketing use. Good lighting, professional composition, and appropriate pacing for product demonstration. Suitable for social media or product pages.
-**Score 0.75**: Clips are presentable with minor polish needed for marketing use.
-**Score 0.5**: Clips convey the product but need significant improvement for marketing use.
-**Score 0.25**: Very rough output not suitable for marketing.
-**Score 0.0**: Unusable output.
+**Score 1.0**: Clips have reasonable lighting and composition that convey the product clearly enough to be used in a product context (e.g., website or social media).
+**Score 0.0**: Output is unusable for any marketing purpose due to broken rendering, missing content, or incoherent presentation.

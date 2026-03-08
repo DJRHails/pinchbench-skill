@@ -154,32 +154,20 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
 ### Criterion 1: Map Visualization (Weight: 30%)
 
-**Score 1.0**: Beautiful choropleth world map with gradient coloring by happiness score. All countries are visible and correctly colored. Hover shows country name and exact score value. Smooth transitions and professional styling.
-**Score 0.75**: Functional map with most countries colored correctly. Hover works but may have minor issues with some countries.
-**Score 0.5**: Basic map present but incomplete coverage, missing hover, or incorrect color mapping.
-**Score 0.25**: Minimal map attempt — perhaps a placeholder or very few countries shown.
-**Score 0.0**: No map visualization present.
+**Score 1.0**: A choropleth world map is present with countries colored by happiness score. Hover or click interaction shows the country name and score value. Minor gaps in country coverage or styling are acceptable.
+**Score 0.0**: No map visualization present, or the map is a non-functional placeholder with no data-driven coloring.
 
 ### Criterion 2: Detail Chart & Linkage (Weight: 30%)
 
-**Score 1.0**: Second chart (bar, spider, or similar) shows component breakdown for selected country. Clicking a country on the map updates the chart. Visual linkage is clear and intuitive.
-**Score 0.75**: Chart exists and updates on country selection, but may have minor visual or data issues.
-**Score 0.5**: Chart exists but is not properly linked to the map, or shows incorrect data.
-**Score 0.25**: Static chart with no interactivity or linkage.
-**Score 0.0**: No secondary chart present.
+**Score 1.0**: A second chart (bar, spider, or similar) exists showing component breakdown. Interacting with a country on the map updates or highlights the corresponding data in the chart. Minor visual issues are acceptable.
+**Score 0.0**: No secondary chart present, or the chart is completely unlinked from the map with no interactive behavior.
 
 ### Criterion 3: Data Accuracy (Weight: 20%)
 
-**Score 1.0**: Dashboard correctly reads and displays all data from the provided XLS file. Country scores and component values match the source data.
-**Score 0.75**: Most data is correct with minor discrepancies or missing countries.
-**Score 0.5**: Some data is present but significant accuracy issues or many missing countries.
-**Score 0.25**: Data appears hardcoded or does not match the source file.
-**Score 0.0**: No data integration or completely wrong values.
+**Score 1.0**: The dashboard uses data from the provided XLS file. Country scores and component values are generally consistent with the source data. Minor discrepancies or a few missing countries are acceptable.
+**Score 0.0**: No data integration from the XLS file, data is entirely hardcoded with wrong values, or the dashboard shows no meaningful data.
 
 ### Criterion 4: Design & Usability (Weight: 20%)
 
-**Score 1.0**: Professional, polished design aligned with the happiness theme. Intuitive layout, clear legends, readable labels, good color choices. Works well on different screen sizes.
-**Score 0.75**: Good design with minor polish issues. Usable and readable.
-**Score 0.5**: Functional but basic design. May be cluttered or hard to navigate.
-**Score 0.25**: Poor visual design that hinders usability.
-**Score 0.0**: Unusable or no design effort.
+**Score 1.0**: The dashboard has a coherent visual design with readable labels, a color legend, and a usable layout. It does not require a server to run. Minor polish issues are acceptable.
+**Score 0.0**: The dashboard is unusable, has no design effort, or fails to load in a browser.
