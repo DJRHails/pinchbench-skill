@@ -62,7 +62,7 @@ def _build_task_markdown(row: dict) -> str:
     if file_name:
         workspace_files_yaml = textwrap.dedent(f"""\
             workspace_files:
-              - source: gaia/{task_id}/{file_name}
+              - source: gaia/{file_name}
                 dest: inputs/{file_name}
         """).rstrip()
         file_ref = f"\n\nThe file `inputs/{file_name}` is provided."
@@ -189,10 +189,8 @@ def _download_file(
 
     from huggingface_hub import hf_hub_download
 
-    task_id = row["task_id"]
-    dest_dir = ASSETS_DIR / task_id
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    dest_file = dest_dir / file_name
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    dest_file = ASSETS_DIR / file_name
 
     if dest_file.exists():
         return dest_file
