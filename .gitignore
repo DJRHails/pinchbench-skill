@@ -65,5 +65,9 @@ uv.lock
 results/
 .pinchbench/
 
+# GAIA benchmark (gated dataset — do not commit)
+tasks/gaia/
+assets/gaia/
+
 # Vultr deployment
 deploy/
