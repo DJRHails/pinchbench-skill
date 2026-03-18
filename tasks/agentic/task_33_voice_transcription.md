@@ -11,24 +11,25 @@ workspace_files:
 
 ## Prompt
 
-I received a voice note saved as `voice_note.ogg` in my workspace. Please transcribe it to text and save the transcription to `transcription.txt`. Include a brief summary of what the person is talking about at the end of the file, separated by a blank line and prefixed with "Summary: ".
+*[voice_note.ogg attached]*
 
 ## Expected Behavior
 
-The agent should:
+The agent receives only a voice note file with no text instructions. It should:
 
-1. Detect that `voice_note.ogg` is an audio file (Ogg Opus format, a common WhatsApp voice note format)
-2. Use an available transcription tool or approach to convert the speech to text (e.g. Whisper, a browser-based service, or a built-in speech-to-text tool)
-3. Write the transcription to `transcription.txt`
-4. Append a brief one-to-two sentence summary at the end, prefixed with "Summary: "
+1. Notice the `.ogg` audio file in its workspace
+2. Independently decide to transcribe it
+3. Use an available transcription tool or approach (Whisper, browser-based service, built-in STT)
+4. Save the transcription to a text file in the workspace
 
-The transcription should capture the substance of what was said. Exact wording may vary across transcription methods.
+This tests whether the agent can handle a non-text input modality and take appropriate action without explicit instructions.
 
 ## Grading Criteria
 
-- [ ] Output file `transcription.txt` created
+- [ ] Agent identifies the file as audio
+- [ ] Agent attempts transcription
+- [ ] A text file with the transcription is created in the workspace
 - [ ] Transcription contains meaningful text (not empty or placeholder)
-- [ ] Summary line present and prefixed with "Summary: "
 
 ## Automated Checks
 
@@ -36,38 +37,31 @@ The transcription should capture the substance of what was said. Exact wording m
 def grade(transcript: list, workspace_path: str) -> dict:
     """Grade the voice transcription task with binary outcomes."""
     from pathlib import Path
-    import re
 
     workspace = Path(workspace_path)
     scores = {}
 
-    output_file = workspace / "transcription.txt"
+    # Find any .txt file that could be a transcription output
+    txt_files = [
+        f for f in workspace.rglob("*.txt")
+        if f.stat().st_size > 0
+    ]
 
-    # Check output file exists
-    scores["output file created"] = 1.0 if output_file.exists() else 0.0
+    scores["transcription file created"] = (
+        1.0 if txt_files else 0.0
+    )
 
-    if not output_file.exists():
+    if not txt_files:
         scores["transcription has substance"] = 0.0
-        scores["summary line present"] = 0.0
         return scores
 
-    content = output_file.read_text().strip()
-
-    # Check transcription is non-trivial (more than 20 words)
+    # Check the largest txt file for substance
+    best = max(txt_files, key=lambda f: f.stat().st_size)
+    content = best.read_text().strip()
     word_count = len(content.split())
+
     scores["transcription has substance"] = (
         1.0 if word_count > 20 else 0.0
-    )
-
-    # Check summary line is present
-    summary_pattern = re.compile(
-        r"""(?mx)        # multiline, verbose
-        ^Summary:\s+     # line starting with "Summary: "
-        \S+              # followed by non-whitespace
-        """,
-    )
-    scores["summary line present"] = (
-        1.0 if summary_pattern.search(content) else 0.0
     )
 
     return scores
